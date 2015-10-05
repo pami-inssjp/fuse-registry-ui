@@ -1,0 +1,10 @@
+body{
+  background-color: #ECECEC;
+}
+
+
+.spinner.spinner-xlg {
+  border-width: 7px;
+  height: 60px;
+  width: 60px;
+}

@@ -1,0 +1,29 @@
+<div class="container-fluid container-cards-pf" ng-init="init()">
+
+<div class="page-header page-header-bleed-right">
+  <div class="actions pull-right">
+    <a href="" ng-click="refresh()"><span class="pficon pficon-refresh"></span> Refresh Results</a>
+  </div>
+  <h1>Containers</span></h1>
+</div>
+
+<div class="row row-cards-pf" ng-repeat="nodo in nodos">
+  <h2>Nodo: {{nodo.nombre}}  <span ng-if="!nodo.ready" class="spinner spinner-sm spinner-inline"></h2>
+  <div ng-if="ready" class="col-xs-6 col-sm-4 col-md-2" ng-repeat="container in nodo.containers | orderBy:'status'">
+    <div class="card-pf card-pf-accented card-pf-aggregate-status">
+      <h2 class="card-pf-title">
+        <span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">{{container.status}}</span> {{container.container}}
+      </h2>
+      <div class="card-pf-body">
+        <p class="card-pf-aggregate-status-notifications">
+          <span class="card-pf-aggregate-status-notification">
+            <a href="#" class="add" data-toggle="tooltip" data-placement="top" title="Add Ipsum">
+              <span class="pficon pficon-ok" ng-class="getContainerNotitication(container)">
+              </span>{{container.provisionStatus}}
+            </a></span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

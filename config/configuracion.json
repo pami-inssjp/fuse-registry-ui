@@ -1,0 +1,4 @@
+[
+  {"id":"A1","nombre":"Nodo 1","url":"http://localhost:8181/jolokia"},
+  {"id":"A2","nombre":"Nodo 2","url":"http://172.17.42.1:8181/jolokia"}
+]
